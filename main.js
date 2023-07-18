@@ -28,20 +28,13 @@ document.querySelector("button:nth-of-type(1)").addEventListener("click", ()=> {
     answer.style.padding = "2px 8px"
     answer.textContent = `${bmiValue}`
 
-    if(bmiValue <= 18.5){
-        bmiStatus.textContent = "You are Underweight"
-    }
-
-    if(bmiValue <= 18.5){
+    if(Number(bmiValue) < 18.5){
         bmiStatus.textContent = "You are Under Weight"
-    }
-    if(bmiValue >= 18.5 || bmiValue <= 24.9){
+    }else if(Number(bmiValue) >= 18.5 && Number(bmiValue) <= 24.9){
         bmiStatus.textContent = "You are Healthy Weight"
-    }
-    if(bmiValue >= 25 || bmiValue <= 29.9){
+    }else if(Number(bmiValue) >= 25 && Number(bmiValue) <= 29.9){
         bmiStatus.textContent = "You are Over Weight"
-    }
-    if(bmiValue >= 30){
+    }else if(Number(bmiValue) >= 30){
         bmiStatus.textContent = "You are Obese"
     }
 })
